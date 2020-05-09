@@ -1,0 +1,55 @@
+In addition to a Framework like Gridism or the more powerful Bootstrap one can also consider using CSS Grid. 
+There is a really good hands-on tutorial on the basics of CSS Grid over at W3Schools which you can check out here.
+
+In the following video I'm going to show you how you can use CSS Grid to make a layout that is similar to the ones we made with Gridism and Bootstrap.
+
+The great thing is that we can start with an example in W3Schools and then modify.
+
+So lets look at it.
+
+First lets look at the simple stuff first.
+
+To begin with we have a diplay property whose value is set to grid.
+This is what enables the grid and allows us then to make a lot of associated declarations that wouldn't have any impact otherwise.
+
+Once we've declared the grid we can also set the grid-gap which is this...
+
+And the padding which is the outside area
+
+Now notice that there are six divs inside the grid-container.  By default they would be stacked.  But the css grid is rearranging them.  How is it doing it?
+
+First notice that the first div has been assisgned a grid-area property which we've assigned an arbitrary value, in this case myArea.
+
+That myArea value can then be used in the grid-template-areas to define the columns and rows of the grid.  
+
+In this case there are five columns, and because they are all associated with the
+myArea value it means -- kind of like a colspan -- that the content of item1 is
+going to span across all five rows which in fact it does.
+
+The remaining divs as we can see, are merely arranging themselves under these existing columns.  
+
+To get a better sense of how the grid works lets first make the grid six columns instead of five.  Easy peasy.
+
+Notice, that once again the remaining divs rearrange themselves under the six columns.
+
+But we can rejibber these too.
+
+For example, lets define another row and make the item2 div span all the columns in that row.  We can basically follow the model of the first row.
+
+First, we associate a new grid-area with the div
+
+And then we define a new row.  Notice that each row is delineated by the apostraphes.
+
+See?
+
+Think of that top row as the nav and the second row as the place where we will put a hero image.  In fact lets relabel the classes and grid-area properties so they make more semantic sense.  
+
+Now lets define 3 columns below that.
+
+First we relabel the classes.  And then we create 3 new areas.
+
+And then, for the kicker, instead of spanning the entire grid we let each area span only two columns.  Like so.
+
+Notice now that we have a basic grid whose layout basically is the same as the ones we've seen in gridism and in bootstrap.
+
+
