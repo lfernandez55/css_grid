@@ -52,4 +52,8 @@ And then, for the kicker, instead of spanning the entire grid we let each area s
 
 Notice now that we have a basic grid whose layout basically is the same as the ones we've seen in gridism and in bootstrap.
 
+In this final step I'm just going to use the same technique i used in gridism and bootstrap to add a background image to the hero section.  Plus some dummny content in appropriate places.  And voila, the beginnings of a new page.
+
+One thing to note.  Unlike gridism or bootstrap the columns don't stack when the screen gets small.  But we can fix that easily with a media query that redefines the grid-template-area when the screen drops below 500 pixels in width.
+
 
