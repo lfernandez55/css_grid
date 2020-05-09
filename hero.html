@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw  ;
+            grid-template-rows: 30vh 30vh 3vh ;
+            /* grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto ;
+            grid-template-rows: auto auto auto ; */
+            grid-gap: .1vw;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .nav{
+            grid-area: 1 / 1 / 3 / 13;
+        }
+        .hero{
+            grid-area: 2 / 1 / 4 / 13;
+        }
+        /* .col1{
+            grid-area: 1 /  4;
+        }
+        .col2{
+            grid-area: 4 /  9;
+        }
+        .col3{
+            grid-area: 8 /  13;
+        }   */
+    </style>
+</head>
+
+<body>
+    <h1>STILL UNDER CONSTRUCTION</h1>
+    <div class="grid-container">
+        
+        <div class="nav">nav</div>
+        <div class="hero">hero</div>
+        <div class="col1">col 1</div>
+        <div class="col2">col 2</div>
+        <div class="col3">col 3</div>
+     
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <!--Modified from: https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_grid-area_named -->
+<head>
+    <style>
+        .nav {
+            grid-area: navArea;
+        }
+
+        .hero {
+            grid-area: heroArea;
+        }
+
+        .col1 {
+            grid-area: col1Area;
+        }
+
+        .col2 {
+            grid-area: col2Area;
+        }
+
+        .col3 {
+            grid-area: col3Area;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas: 'navArea navArea navArea'
+                'heroArea heroArea heroArea'
+                'col1Area col2Area col3Area'
+            ;
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>The grid-area Property</h1>
+
+    <p>You can use the <em>grid-area</em> property to name grid items.</p>
+
+    <p>You can refer to the name when you set up the grid layout, by using the <em>grid-template-areas</em> property on
+        the grid container.</p>
+
+    <p>Item1, is called "myArea" and will take up the place of all five columns:</p>
+
+    <div class="grid-container">
+        <div class="nav">nav</div>
+        <div class="hero">hero</div>
+        <div class="col1">col1</div>
+        <div class="col2">col2</div>
+        <div class="col3">col3</div>
+
+    </div>
+
+</body>
+
+</html>
