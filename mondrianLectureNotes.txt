@@ -1,0 +1,53 @@
+Elsewhere in this course I showed you how to use CSS Grid to accomplish the familiar cookie-cutter type of hero image layout that we also created with the Gridism and Bootstrap frameworks.  
+
+(Show hero layout)
+
+But we can also use CSS-grid for more ambitious complicated layouts.  For example, earlier in the course I showed you an exercise where we used floats to create this replica of Piet Mondrian's "Composition with Red Blue and Yellow" 
+
+Show painting maybe on Wikipedia
+
+We can accomplish nearly the same thing using CSS Grid and in a way that IMO is slightly more intuitive than how it's done with floats.  In the following video I'll show you how to do it and in the process you'll also learn a bit more about the power of CSS-grid.
+
+First, when we created the hero layout we used CSS-grid's grid-template-areas property to layout the web page.  
+
+(Show hero layout followed by shot of grid-template-areas)
+
+While this, in itself, is super powerful, we can also define the grid by using 
+
+grid-template-columns 
+and
+grid-template-rows
+
+instead.  So for example, in this code example we use these new properties to lay out a grid that is four by four:
+
+(Show 16 by 16 version of https://jsbin.com/kelazet/edit?html,css,output)
+
+What's super cool about this is that we can also use a slightly different syntax in the grid-area property to make a grid-area span across multiple rows and columns.  So, in this slightly modified version of the grid I've made one div span across two columns and three rows:
+
+Show https://jsbin.com/kelazet/edit?html,css,output
+
+The way to do this is by assigning this more sophisticated value to the grid area property:
+
+hightlight this line:  grid-area: 1 / 1 / 4 / 3;
+
+The first pair (that is  1 / 1 ) define the beginning point of the area which is column 1, row 1.  And the second pair define the end of the area offset by one.  So the span ends at row 3, column 2.  To define that correctly in the CSS you add one to each of those values making it 4/3.  
+
+(As an aside I don't know why the beginning coordinates of the area are NOT offset while the ending coordinates ARE. But that's just how it is!)
+
+Now with this new way of using CSS-Grid we can easily leverage it to make a nice semblance of Mondrian's painting by splitting up the painting into an eight by eight grid:
+
+show sixtyfour grid
+
+and then using the grid-area property along with background-color properties to block off the appropriate areas.  Let's now look at the finished Mondrian html version and see how each area is blocked off:
+
+Rather than showing you the CSS in the editor lets just look at the Mondrian painting along with the developer tools to see how each of Mondrian's yellow, blue and red quadrants are coded in the CSS:
+
+(show mondrian painting in browser and use developer tool to reveal CSS)
+
+Go through a few areas in sequence, 1,2 and blue.
+
+I'm sure you are noticing that there's black background outside the painting that doesn't match Mondrian's painting. This is happening because of a limitation in CSS-grid right now: whatever color you set your grid gaps to (show grid-gap code) so too will be the background outside the actual grid.  There's a fix for this (show border version) by setting the grid gap to zero and adding borders. So if you want greate verisimilitude you'd have to do this. . . . .
+
+Maybe assign a Mondrian painting example for them to do. . .like this one:
+
+https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sipa-00090430-00000777-1583436452.jpg?crop=0.98xw:1xh;center,top&resize=980:*
